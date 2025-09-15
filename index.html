@@ -1,0 +1,16 @@
+const accordionButtons = document.querySelectorAll('.accordion-button');
+
+accordionButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        accordionButtons.forEach(otherButton => {
+            if (otherButton !== button && otherButton.classList.contains('active')) {
+                otherButton.classList.remove('active');
+                otherButton.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        button.classList.toggle('active');
+        const content = button.nextElementSibling;
+        content.style.maxHeight = button.classList.contains('active') ? content.scrollHeight + 'px' : null;
+    });
+});
