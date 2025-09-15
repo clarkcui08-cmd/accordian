@@ -1,53 +1,145 @@
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #e3f2fd;
-        padding: 30px;
-        color: #263238;
-    }
+<!DOCTYPE html>
+<html lang="en">
 
-    h2 {
-        color: #263238;
-        text-align: center;
-    }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tool Accordion</title>
+    <style>
+        /* ===== CSS Styling ===== */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd;
+            padding: 30px;
+            color: #263238;
+        }
 
-    .accordion {
-        max-width: 600px;
-        margin: auto;
-        background: #fff;
-        border-radius: 6px;
-        overflow: hidden;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
+        h2 {
+            color: #263238;
+            text-align: center;
+        }
 
-    .accordion-item {
-        border-bottom: 1px solid #cfd8dc;
-    }
+        .accordion {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
 
-    .accordion-item label {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 20px;
-        background: linear-gradient(to right, #4169e1, #bb86fc);
-        color: white;
-        cursor: pointer;
-        font-weight: bold;
-        transition: background 0.3s ease;
-    }
+        .accordion-item {
+            border-bottom: 1px solid #cfd8dc;
+        }
 
-    .accordion-item label:hover {
-        background: linear-gradient(to right, #395bd9, #b37de9);
-    }
+        .accordion-item label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: linear-gradient(to right, #4169e1, #bb86fc);
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
 
-    .accordion-item label::after {
-        content: "+";
-        font-size: 18px;
-        transition: transform 0.3s ease, content 0.3s ease;
-    }
+        .accordion-item label:hover {
+            background: linear-gradient(to right, #395bd9, #b37de9);
+        }
 
-    input[type="radio"] {
-        display: none;
-    }
+        .accordion-item label::after {
+            content: "+";
+            font-size: 18px;
+            transition: transform 0.3s ease, content 0.3s ease;
+        }
 
+        input[type="radio"] {
+            display: none;
+        }
 
+        input[type="radio"]:checked + label::after {
+            content: "-";
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            background-color: #b2dfdb;
+            color: #263238;
+            padding: 0 20px;
+            font-size: 14px;
+            line-height: 1.5em;
+            transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+        }
+
+        input[type="radio"]:checked~.accordion-content {
+            max-height: 500px;
+            padding: 15px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>🤖 GPT's 10 Useful AI Tools</h2>
+
+    <div class="accordion">
+        <!-- Tool 1 -->
+        <div class="accordion-item">
+            <input type="radio" name="accordion" id="tool1" checked>
+            <label for="tool1">1. StudyAi Tools</label>
+            <div class="accordion-content">
+                StudyAi Tools provides a variety of AI-driven tools designed to help students study more effectively.
+                These tools offer personalized learning experiences, adaptive quizzes, and smart study plans, ultimately
+                helping students achieve better academic results with less effort.
+            </div>
+        </div>
+
+        <!-- Tool 2 -->
+        <div class="accordion-item">
+            <input type="radio" name="accordion" id="tool2">
+            <label for="tool2">2. MaxAI</label>
+            <div class="accordion-content">
+                MaxAI is a comprehensive suite of AI tools that assists with automating repetitive tasks, enabling
+                efficient content creation, and simplifying complex data analysis. By leveraging MaxAI, users can
+                significantly boost their productivity across diverse professional and personal domains.
+            </div>
+        </div>
+
+        <!-- Tool 3 -->
+        <div class="accordion-item">
+            <input type="radio" name="accordion" id="tool3">
+            <label for="tool3">3. LTX Studio</label>
+            <div class="accordion-content">
+                LTX Studio is an innovative AI-powered writing and editing tool crafted to assist users in producing
+                superior content swiftly and efficiently. LTX Studio enhances overall writing quality through advanced
+                grammar checks, style suggestions, and content optimization capabilities.
+            </div>
+        </div>
+
+        <!-- Tool 4 -->
+        <div class="accordion-item">
+            <input type="radio" name="accordion" id="tool4">
+            <label for="tool4">4. Notion AI</label>
+            <div class="accordion-content">
+                Notion AI seamlessly integrates artificial intelligence into the Notion workspace, providing assistance
+                with writing tasks, facilitating collaborative brainstorming sessions, and optimizing project management
+                workflows. Notion AI maximizes efficiency for both individual and team productivity.
+            </div>
+        </div>
+
+        <!-- Tool 5 -->
+        <div class="accordion-item">
+            <input type="radio" name="accordion" id="tool5">
+            <label for="tool5">5. Quizlet</label>
+            <div class="accordion-content">
+                Quizlet is a versatile learning platform boosted by AI, offering various tools such as flashcards,
+                engaging quizzes, and interactive study games. Quizlet leverages adaptive learning algorithms to help
+                students master any subject effectively and enjoyably, thereby accelerating learning progress.
+            </div>
+        </div>
+
+        <!-- Tool 6 -->
+        <div class="accordion-item">
+            <input type="radio" name="accordion" id="tool6">
