@@ -1,91 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Tool Accordion</title>
-    <style>
-        /* ===== CSS Styling ===== */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #e3f2fd;
-            padding: 30px;
-            color: #263238;
-        }
-
-        h2 {
-            color: #263238;
-            text-align: center;
-        }
-
-        .accordion {
-            max-width: 600px;
-            margin: auto;
-            background: #fff;
-            border-radius: 6px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .accordion-item {
-            border-bottom: 1px solid #cfd8dc;
-        }
-
-        .accordion-item label {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            background: linear-gradient(to right, #4169e1, #bb86fc);
-            color: white;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s ease;
-        }
-
-        .accordion-item label:hover {
-            background: linear-gradient(to right, #395bd9, #b37de9);
-        }
-
-        .accordion-item label::after {
-            content: "+";
-            font-size: 18px;
-            transition: transform 0.3s ease, content 0.3s ease;
-        }
-
-        input[type="radio"] {
-            display: none;
-        }
-
-        input[type="radio"]:checked + label::after {
-            content: "-";
-        }
-
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            background-color: #b2dfdb;
-            color: #263238;
-            padding: 0 20px;
-            font-size: 14px;
-            line-height: 1.5em;
-            transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
-        }
-
-        input[type="radio"]:checked~.accordion-content {
-            max-height: 500px;
-            padding: 15px 20px;
-        }
-    </style>
-</head>
-
-<body>
-
-    <h2>🤖 GPT's 10 Useful AI Tools</h2>
-
-    <div class="accordion">
-        <!-- Tool 1 -->
+   <!-- Tool 1 -->
         <div class="accordion-item">
             <input type="radio" name="accordion" id="tool1" checked>
             <label for="tool1">1. StudyAi Tools</label>
@@ -143,3 +56,47 @@
         <!-- Tool 6 -->
         <div class="accordion-item">
             <input type="radio" name="accordion" id="tool6">
+            <label for="tool6">6. MathGPT</label>
+            <div class="accordion-content">
+                MathGPT is an innovative AI tool designed to tackle challenging math problems, offering step-by-step
+                solutions, and delivering clear explanations of complex mathematical concepts. MathGPT strives to make
+                learning and understanding math more accessible for all learners.
+            </div>
+        </div>
+
+        <!-- Tool 7 -->
+        <div class="accordion-item">
+            <input type="radio" name="accordion" id="tool7">
+            <label for="tool7">7. Adobe Firefly</label>
+            <div class="accordion-content">
+                Adobe Firefly is a groundbreaking creative AI tool empowering users to generate captivating images, apply
+                stunning text effects, and produce a wide array of visual content effortlessly. With Firefly, unleashing
+                creativity and bringing imaginative ideas to life has never been simpler.
+            </div>
+        </div>
+
+        <!-- Tool 8 -->
+        <div class="accordion-item">
+            <input type="radio" name="accordion" id="tool8">
+            <label for="tool8">8. Slidesgo</label>
+            <div class="accordion-content">
+                Slidesgo is an AI-driven platform that automates the creation of professional-grade presentation
+                templates, drastically reducing the time and effort needed to design compelling visual aids. Slidesgo
+                provides a vast library of customizable templates suitable for any presentation purpose.
+            </div>
+        </div>
+
+        <!-- Tool 9 -->
+        <div class="accordion-item">
+            <input type="radio" name="accordion" id="tool9">
+            <label for="tool9">9. Grammarly</label>
+            <div class="accordion-content">
+                Grammarly is a robust AI-powered writing assistant meticulously engineered to check grammar, spelling,
+                punctuation, and style with unparalleled accuracy. By utilizing Grammarly, users can guarantee that their
+                writing is always polished, professional, and error-free across all communication channels.
+            </div>
+        </div>
+
+        <!-- Tool 10 -->
+        <div class="accordion-item">
+            <input type="radio" name="accordion" id="tool1
