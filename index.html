@@ -1,4 +1,89 @@
-   <!-- Tool 1 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tool Accordion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd;
+            padding: 30px;
+            color: #263238;
+        }
+
+        h2 {
+            color: #263238;
+            text-align: center;
+        }
+
+        .accordion {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid #cfd8dc;
+        }
+
+        .accordion-item label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: linear-gradient(to right, #4169e1, #bb86fc);
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .accordion-item label:hover {
+            background: linear-gradient(to right, #395bd9, #b37de9);
+        }
+
+        .accordion-item label::after {
+            content: "+";
+            font-size: 18px;
+            transition: transform 0.3s ease, content 0.3s ease;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        input[type="radio"]:checked + label::after {
+            content: "-";
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            background-color: #b2dfdb;
+            color: #263238;
+            padding: 0 20px;
+            font-size: 14px;
+            line-height: 1.5em;
+            transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+        }
+
+        input[type="radio"]:checked~.accordion-content {
+            max-height: 500px;
+            padding: 15px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>🤖 GPT's 10 Useful AI Tools</h2>
+
+    <div class="accordion">
         <div class="accordion-item">
             <input type="radio" name="accordion" id="tool1" checked>
             <label for="tool1">1. StudyAi Tools</label>
@@ -9,7 +94,6 @@
             </div>
         </div>
 
-        <!-- Tool 2 -->
         <div class="accordion-item">
             <input type="radio" name="accordion" id="tool2">
             <label for="tool2">2. MaxAI</label>
@@ -20,7 +104,6 @@
             </div>
         </div>
 
-        <!-- Tool 3 -->
         <div class="accordion-item">
             <input type="radio" name="accordion" id="tool3">
             <label for="tool3">3. LTX Studio</label>
@@ -31,7 +114,6 @@
             </div>
         </div>
 
-        <!-- Tool 4 -->
         <div class="accordion-item">
             <input type="radio" name="accordion" id="tool4">
             <label for="tool4">4. Notion AI</label>
@@ -42,7 +124,6 @@
             </div>
         </div>
 
-        <!-- Tool 5 -->
         <div class="accordion-item">
             <input type="radio" name="accordion" id="tool5">
             <label for="tool5">5. Quizlet</label>
@@ -53,7 +134,6 @@
             </div>
         </div>
 
-        <!-- Tool 6 -->
         <div class="accordion-item">
             <input type="radio" name="accordion" id="tool6">
             <label for="tool6">6. MathGPT</label>
@@ -64,7 +144,6 @@
             </div>
         </div>
 
-        <!-- Tool 7 -->
         <div class="accordion-item">
             <input type="radio" name="accordion" id="tool7">
             <label for="tool7">7. Adobe Firefly</label>
@@ -75,7 +154,6 @@
             </div>
         </div>
 
-        <!-- Tool 8 -->
         <div class="accordion-item">
             <input type="radio" name="accordion" id="tool8">
             <label for="tool8">8. Slidesgo</label>
@@ -86,7 +164,6 @@
             </div>
         </div>
 
-        <!-- Tool 9 -->
         <div class="accordion-item">
             <input type="radio" name="accordion" id="tool9">
             <label for="tool9">9. Grammarly</label>
@@ -97,6 +174,18 @@
             </div>
         </div>
 
-        <!-- Tool 10 -->
         <div class="accordion-item">
-            <input type="radio" name="accordion" id="tool1
+            <input type="radio" name="accordion" id="tool10">
+            <label for="tool10">10. Curipod</label>
+            <div class="accordion-content">
+                Curipod is an indispensable AI-enhanced tool designed for educators. Curipod allows teachers to
+                effortlessly create interactive lessons, engaging quizzes, and captivating presentations that actively
+                involve students. With Curipod, teachers can elevate classroom engagement and enhance overall lesson
+                design.
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
