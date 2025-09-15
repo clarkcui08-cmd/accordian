@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GPT's 10 Tools - Accordion</title>
+<title>GPT's 10 Tools - Smooth Accordion</title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -24,6 +24,7 @@
         border-bottom: 1px solid #ddd;
     }
 
+    /* Label (Header) Styles */
     .accordion-item label {
         display: flex;
         justify-content: space-between;
@@ -32,27 +33,29 @@
         background-color: #f0f0f0;
         cursor: pointer;
         font-weight: bold;
-        transition: background 0.3s;
+        transition: background 0.3s ease;
     }
 
     .accordion-item label:hover {
         background-color: #e2e2e2;
     }
 
+    /* Plus/Minus Symbol */
     .accordion-item label::after {
         content: "+";
         font-size: 18px;
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, content 0.3s ease;
     }
 
-    .accordion-item input {
+    input[type="radio"] {
         display: none;
     }
 
-    .accordion-item input:checked + label::after {
+    input[type="radio"]:checked + label::after {
         content: "-";
     }
 
+    /* Accordion Content */
     .accordion-content {
         max-height: 0;
         overflow: hidden;
@@ -60,11 +63,11 @@
         padding: 0 20px;
         font-size: 14px;
         line-height: 1.5em;
-        transition: max-height 0.3s ease;
+        transition: max-height 0.5s ease, padding 0.3s ease;
     }
 
-    .accordion-item input:checked ~ .accordion-content {
-        max-height: 300px; /* Large enough for longest content */
+    input[type="radio"]:checked ~ .accordion-content {
+        max-height: 500px; /* Enough for longest section */
         padding: 15px 20px;
     }
 </style>
@@ -75,7 +78,7 @@
 
 <div class="accordion">
     <div class="accordion-item">
-        <input type="checkbox" id="tool1">
+        <input type="radio" name="accordion" id="tool1" checked>
         <label for="tool1">1. Text Summarization</label>
         <div class="accordion-content">
             Summarize long articles, research papers, or documents into concise key points while keeping essential meaning intact.
@@ -83,7 +86,7 @@
     </div>
 
     <div class="accordion-item">
-        <input type="checkbox" id="tool2">
+        <input type="radio" name="accordion" id="tool2">
         <label for="tool2">2. Code Generation & Debugging</label>
         <div class="accordion-content">
             Generate, explain, and debug code in multiple programming languages including Python, JavaScript, Java, and C++.
@@ -91,7 +94,7 @@
     </div>
 
     <div class="accordion-item">
-        <input type="checkbox" id="tool3">
+        <input type="radio" name="accordion" id="tool3">
         <label for="tool3">3. Natural Language Translation</label>
         <div class="accordion-content">
             Translate between multiple languages with context awareness to preserve tone and meaning.
@@ -99,7 +102,7 @@
     </div>
 
     <div class="accordion-item">
-        <input type="checkbox" id="tool4">
+        <input type="radio" name="accordion" id="tool4">
         <label for="tool4">4. Content Writing</label>
         <div class="accordion-content">
             Assist in generating blog posts, essays, marketing copy, scripts, and even poetry tailored to your audience.
@@ -107,7 +110,7 @@
     </div>
 
     <div class="accordion-item">
-        <input type="checkbox" id="tool5">
+        <input type="radio" name="accordion" id="tool5">
         <label for="tool5">5. Data Analysis Assistance</label>
         <div class="accordion-content">
             Help interpret datasets, explain statistical results, and guide data cleaning and visualization strategies.
@@ -115,7 +118,7 @@
     </div>
 
     <div class="accordion-item">
-        <input type="checkbox" id="tool6">
+        <input type="radio" name="accordion" id="tool6">
         <label for="tool6">6. Idea Brainstorming</label>
         <div class="accordion-content">
             Generate creative ideas for startups, projects, marketing campaigns, product names, and story plots.
@@ -123,7 +126,7 @@
     </div>
 
     <div class="accordion-item">
-        <input type="checkbox" id="tool7">
+        <input type="radio" name="accordion" id="tool7">
         <label for="tool7">7. Study & Learning Aid</label>
         <div class="accordion-content">
             Explain complex concepts simply, provide practice problems, and create study guides.
@@ -131,7 +134,7 @@
     </div>
 
     <div class="accordion-item">
-        <input type="checkbox" id="tool8">
+        <input type="radio" name="accordion" id="tool8">
         <label for="tool8">8. Resume & Cover Letter Writing</label>
         <div class="accordion-content">
             Create professional resumes, cover letters, and LinkedIn summaries customized for specific job applications.
@@ -139,7 +142,7 @@
     </div>
 
     <div class="accordion-item">
-        <input type="checkbox" id="tool9">
+        <input type="radio" name="accordion" id="tool9">
         <label for="tool9">9. Conversational Simulation</label>
         <div class="accordion-content">
             Simulate realistic conversations for training, practicing interviews, or improving language skills.
@@ -147,7 +150,7 @@
     </div>
 
     <div class="accordion-item">
-        <input type="checkbox" id="tool10">
+        <input type="radio" name="accordion" id="tool10">
         <label for="tool10">10. Research & Knowledge Lookup</label>
         <div class="accordion-content">
             Provide factual information, explain trends, and summarize knowledge across many fields.
