@@ -1,169 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GPT's 10 Tools - Blue Accordion</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #e6f0ff; /* Light blue background */
-        padding: 30px;
-        color: #0d1b2a;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT's 10 Tools - Purple/Blue Accordion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eceff1; /* Blue-gray */
+            padding: 30px;
+            color: #37474f;
+        }
 
-    h2 {
-        color: #0d1b2a; /* Dark blue heading */
-    }
+        h2 {
+            color: #263238;
+            text-align: center;
+        }
 
-    .accordion {
-        max-width: 600px;
-        margin: auto;
-        background: #fff;
-        border-radius: 6px;
-        overflow: hidden;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
+        .accordion {
+            max-width: 600px;
+            margin: auto;
+            background: #cfd8dc; /* Lighter blue-gray for container */
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
 
-    .accordion-item {
-        border-bottom: 1px solid #b3cde0;
-    }
+        .accordion-item {
+            border-bottom: 1px solid #90a4ae; /* A bit darker blue-gray */
+        }
 
-    /* Accordion Header Styles */
-    .accordion-item label {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 20px;
-        background-color: #0d47a1; /* Dark blue */
-        color: white;
-        cursor: pointer;
-        font-weight: bold;
-        transition: background 0.3s ease;
-    }
+        /* Header (Label) Styles */
+        .accordion-item label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: linear-gradient(to right, #4169e1, #bb86fc); /* Royal Blue to Light Purple */
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
 
-    .accordion-item label:hover {
-        background-color: #1565c0; /* Medium blue on hover */
-    }
+        .accordion-item label:hover {
+            background: linear-gradient(to right, #395bd9, #b37de9); /* Slightly darker version on hover */
+        }
 
-    /* Plus/Minus Icons */
-    .accordion-item label::after {
-        content: "+";
-        font-size: 18px;
-        transition: transform 0.3s ease, content 0.3s ease;
-    }
+        /* Plus/Minus Icon */
+        .accordion-item label::after {
+            content: "+";
+            font-size: 18px;
+            transition: transform 0.3s ease, content 0.3s ease;
+        }
 
-    input[type="radio"] {
-        display: none;
-    }
+        input[type="radio"] {
+            display: none;
+        }
 
-    input[type="radio"]:checked + label::after {
-        content: "-";
-    }
+        input[type="radio"]:checked + label::after {
+            content: "-";
+        }
 
-    /* Accordion Content Area */
-    .accordion-content {
-        max-height: 0;
-        overflow: hidden;
-        background: white;
-        padding: 0 20px;
-        font-size: 14px;
-        line-height: 1.5em;
-        color: #0d1b2a; /* Dark text for readability */
-        transition: max-height 0.5s ease, padding 0.3s ease;
-    }
+        /* Accordion Content */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            background-color: #40e0d0; /* Turquoise */
+            color: #263238;
+            padding: 0 20px;
+            font-size: 14px;
+            line-height: 1.5em;
+            transition: max-height 0.5s ease, padding 0.3s ease;
+        }
 
-    input[type="radio"]:checked ~ .accordion-content {
-        max-height: 500px; /* Enough for the longest section */
-        padding: 15px 20px;
-    }
-</style>
+        input[type="radio"]:checked~.accordion-content {
+            max-height: 500px;
+            padding: 15px 20px;
+        }
+    </style>
 </head>
+
 <body>
 
-<h2 style="text-align:center;">🤖 GPT's 10 Useful Tools</h2>
+    <h2>🤖 GPT's 10 Useful Tools</h2>
 
-<div class="accordion">
-    <div class="accordion-item">
-        <input type="radio" name="accordion" id="tool1" checked>
-        <label for="tool1">1. Text Summarization</label>
-        <div class="accordion-content">
-            Summarize long articles, research papers, or documents into concise key points while keeping essential meaning intact.
+    <div class="accordion">
+        <div class="accordion-item">
+            <input type="radio" name="accordion" id="tool1" checked>
+            <label for="tool1">1. Text Summarization</label>
+            <div class="accordion-content">
+                Summarize long articles, research papers, or documents into concise key points while keeping essential
+                meaning intact.
+            </div>
         </div>
-    </div>
 
-    <div class="accordion-item">
-        <input type="radio" name="accordion" id="tool2">
-        <label for="tool2">2. Code Generation & Debugging</label>
-        <div class="accordion-content">
-            Generate, explain, and debug code in multiple programming languages including Python, JavaScript, Java, and C++.
+        <div class="accordion-item">
+            <input type="radio" name="accordion" id="tool2">
+            <label for="tool2">2. Code Generation & Debugging</label>
+            <div class="accordion-content">
+                Generate, explain, and debug code in multiple programming languages including Python, JavaScript, Java,
+                and C++.
+            </div>
         </div>
-    </div>
 
-    <div class="accordion-item">
-        <input type="radio" name="accordion" id="tool3">
-        <label for="tool3">3. Natural Language Translation</label>
-        <div class="accordion-content">
-            Translate between multiple languages with context awareness to preserve tone and meaning.
+        <div class="accordion-item">
+            <input type="radio" name="accordion" id="tool3">
+            <label for="tool3">3. Natural Language Translation</label>
+            <div class="accordion-content">
+                Translate between multiple languages with context awareness to preserve tone and meaning.
+            </div>
         </div>
-    </div>
 
-    <div class="accordion-item">
-        <input type="radio" name="accordion" id="tool4">
-        <label for="tool4">4. Content Writing</label>
-        <div class="accordion-content">
-            Assist in generating blog posts, essays, marketing copy, scripts, and even poetry tailored to your audience.
+        <div class="accordion-item">
+            <input type="radio" name="accordion" id="tool4">
+            <label for="tool4">4. Content Writing</label>
+            <div class="accordion-content">
+                Assist in generating blog posts, essays, marketing copy, scripts, and even poetry tailored to your
+                audience.
+            </div>
         </div>
-    </div>
 
-    <div class="accordion-item">
-        <input type="radio" name="accordion" id="tool5">
-        <label for="tool5">5. Data Analysis Assistance</label>
-        <div class="accordion-content">
-            Help interpret datasets, explain statistical results, and guide data cleaning and visualization strategies.
+        <div class="accordion-item">
+            <input type="radio" name="accordion" id="tool5">
+            <label for="tool5">5. Data Analysis Assistance</label>
+            <div class="accordion-content">
+                Help interpret datasets, explain statistical results, and guide data cleaning and visualization
+                strategies.
+            </div>
         </div>
-    </div>
 
-    <div class="accordion-item">
-        <input type="radio" name="accordion" id="tool6">
-        <label for="tool6">6. Idea Brainstorming</label>
-        <div class="accordion-content">
-            Generate creative ideas for startups, projects, marketing campaigns, product names, and story plots.
-        </div>
-    </div>
-
-    <div class="accordion-item">
-        <input type="radio" name="accordion" id="tool7">
-        <label for="tool7">7. Study & Learning Aid</label>
-        <div class="accordion-content">
-            Explain complex concepts simply, provide practice problems, and create study guides.
-        </div>
-    </div>
-
-    <div class="accordion-item">
-        <input type="radio" name="accordion" id="tool8">
-        <label for="tool8">8. Resume & Cover Letter Writing</label>
-        <div class="accordion-content">
-            Create professional resumes, cover letters, and LinkedIn summaries customized for specific job applications.
-        </div>
-    </div>
-
-    <div class="accordion-item">
-        <input type="radio" name="accordion" id="tool9">
-        <label for="tool9">9. Conversational Simulation</label>
-        <div class="accordion-content">
-            Simulate realistic conversations for training, practicing interviews, or improving language skills.
-        </div>
-    </div>
-
-    <div class="accordion-item">
-        <input type="radio" name="accordion" id="tool10">
-        <label for="tool10">10. Research & Knowledge Lookup</label>
-        <div class="accordion-content">
-            Provide factual information, explain trends, and summarize knowledge across many fields.
-        </div>
-    </div>
-</div>
-
-</body>
-</html>
+        <div class="accordion-item">
+            <input type="radio" name="accordion" id="tool6">
+            <
