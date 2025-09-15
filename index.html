@@ -3,12 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GPT's 10 Tools - Smooth Accordion</title>
+<title>GPT's 10 Tools - Blue Accordion</title>
 <style>
     body {
         font-family: Arial, sans-serif;
-        background-color: #f5f5f5;
+        background-color: #e6f0ff; /* Light blue background */
         padding: 30px;
+        color: #0d1b2a;
+    }
+
+    h2 {
+        color: #0d1b2a; /* Dark blue heading */
     }
 
     .accordion {
@@ -21,26 +26,27 @@
     }
 
     .accordion-item {
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid #b3cde0;
     }
 
-    /* Label (Header) Styles */
+    /* Accordion Header Styles */
     .accordion-item label {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 15px 20px;
-        background-color: #f0f0f0;
+        background-color: #0d47a1; /* Dark blue */
+        color: white;
         cursor: pointer;
         font-weight: bold;
         transition: background 0.3s ease;
     }
 
     .accordion-item label:hover {
-        background-color: #e2e2e2;
+        background-color: #1565c0; /* Medium blue on hover */
     }
 
-    /* Plus/Minus Symbol */
+    /* Plus/Minus Icons */
     .accordion-item label::after {
         content: "+";
         font-size: 18px;
@@ -55,7 +61,7 @@
         content: "-";
     }
 
-    /* Accordion Content */
+    /* Accordion Content Area */
     .accordion-content {
         max-height: 0;
         overflow: hidden;
@@ -63,11 +69,12 @@
         padding: 0 20px;
         font-size: 14px;
         line-height: 1.5em;
+        color: #0d1b2a; /* Dark text for readability */
         transition: max-height 0.5s ease, padding 0.3s ease;
     }
 
     input[type="radio"]:checked ~ .accordion-content {
-        max-height: 500px; /* Enough for longest section */
+        max-height: 500px; /* Enough for the longest section */
         padding: 15px 20px;
     }
 </style>
