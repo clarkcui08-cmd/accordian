@@ -8,27 +8,27 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #607d8b; /* A more muted blue-gray */
+            background-color: #e3f2fd; /* Light Blue Background */
             padding: 30px;
-            color: #eceff1; /* Light text for contrast */
+            color: #263238; /* Dark Gray Text */
         }
 
         h2 {
-            color: #eceff1;
+            color: #263238; /* Dark Gray Header */
             text-align: center;
         }
 
         .accordion {
             max-width: 600px;
             margin: auto;
-            background: #78909c; /* Slightly lighter shade */
+            background: #fff; /* White Accordion Container */
             border-radius: 6px;
             overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Darker shadow */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .accordion-item {
-            border-bottom: 1px solid #455a64; /* Darker blue-gray */
+            border-bottom: 1px solid #cfd8dc; /* Light Blue-Gray Divider */
         }
 
         /* Header (Label) Styles */
@@ -45,7 +45,7 @@
         }
 
         .accordion-item label:hover {
-            background: linear-gradient(to right, #395bd9, #b37de9);
+            background: linear-gradient(to right, #395bd9, #b37de9); /* Slightly darker gradient */
         }
 
         /* Plus/Minus Icon */
@@ -67,8 +67,8 @@
         .accordion-content {
             max-height: 0;
             overflow: hidden;
-            background-color: #b2dfdb; /* A lighter, more inviting turquoise */
-            color: #263238; /* Darker text for readability */
+            background-color: #b2dfdb; /* Light Turquoise */
+            color: #263238; /* Dark Gray Text */
             padding: 0 20px;
             font-size: 14px;
             line-height: 1.5em;
@@ -102,4 +102,37 @@
             <div class="accordion-content">
                 Generate, explain, and debug code in multiple programming languages including Python, JavaScript, Java,
                 and C++.
-            
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <input type="radio" name="accordion" id="tool3">
+            <label for="tool3">3. Natural Language Translation</label>
+            <div class="accordion-content">
+                Translate between multiple languages with context awareness to preserve tone and meaning.
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <input type="radio" name="accordion" id="tool4">
+            <label for="tool4">4. Content Writing</label>
+            <div class="accordion-content">
+                Assist in generating blog posts, essays, marketing copy, scripts, and even poetry tailored to your
+                audience.
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <input type="radio" name="accordion" id="tool5">
+            <label for="tool5">5. Data Analysis Assistance</label>
+            <div class="accordion-content">
+                Help interpret datasets, explain statistical results, and guide data cleaning and visualization
+                strategies.
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <input type="radio" name="accordion" id="tool6">
+            <label for="tool6">6. Idea Brainstorming</label>
+            <div class="accordion-content">
+                Generate creative ideas for
