@@ -1,249 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Tool Accordion</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #e3f2fd;
-            padding: 30px;
-            color: #263238;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Toolbox</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
 
-        h2 {
-            color: #263238;
-            text-align: center;
-        }
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
 
-        .accordion {
-            max-width: 600px;
-            margin: auto;
-            background: #fff;
-            border-radius: 6px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
+.accordion-header {
+  background-color: #0073e6;
+  color: white;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+}
 
-        .accordion-item {
-            border-bottom: 1px solid #cfd8dc;
-        }
+.accordion-content {
+  display: none;
+  background-color: white;
+  padding: 15px;
+}
 
-        .accordion-item label {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            background: linear-gradient(to right, #4169e1, #bb86fc);
-            color: white;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s ease;
-        }
+.accordion-content p {
+  margin: 0;
+}
 
-        .accordion-item label:hover {
-            background: linear-gradient(to right, #395bd9, #b37de9);
-        }
+.launch-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #28a745;
+  color: white;
+  padding: 10px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+}
 
-        .accordion-item label::after {
-            content: "+";
-            font-size: 18px;
-            transition: transform 0.3s ease, content 0.3s ease;
-        }
-
-        /* Style for the logo images */
-        .accordion-item label img {
-            max-width: 30px;
-            max-height: 30px;
-            margin-right: 10px;
-            /* Space between logo and text */
-            vertical-align: middle;
-            /* Align image vertically */
-            object-fit: contain;
-            /* Ensure logos fit without distortion */
-        }
-
-        input[type="radio"] {
-            display: none;
-        }
-
-        input[type="radio"]:checked + label::after {
-            content: "-";
-        }
-
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            background-color: #b2dfdb;
-            color: #263238;
-            padding: 0 20px;
-            font-size: 14px;
-            line-height: 1.5em;
-            transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
-        }
-
-        input[type="radio"]:checked~.accordion-content {
-            max-height: 500px;
-            padding: 15px 20px;
-        }
-
-        .launch-button {
-            display: inline-block;
-            padding: 10px 15px;
-            background-color: #4169E1;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-            transition: background-color 0.3s ease;
-        }
-
-        .launch-button:hover {
-            background-color: #395bd9;
-        }
-    </style>
+.launch-btn:hover {
+  background-color: #218838;
+}
+</style>
 </head>
-
 <body>
 
-    <h2>🤖 GPT's 10 Useful AI Tools</h2>
+<h2>AI Toolbox</h2>
 
-    <div class="accordion">
-        <div class="accordion-item">
-            <input type="radio" name="accordion" id="tool1" checked>
-            <label for="tool1"><img
-                    src="https://play-lh.googleusercontent.com/Rha9D7OfwjivSbHfaOoKD33HpsnMxC_tKo77I_cI-t0gsTliN8Y6tnli9Mfzu51shA=w240-h480-rw"
-                    alt="">1. StudyAi Tools</label>
-            <div class="accordion-content">
-                StudyAi Tools provides a variety of AI-driven tools designed to help students study more effectively.
-                These tools offer personalized learning experiences, adaptive quizzes, and smart study plans, ultimately
-                helping students achieve better academic results with less effort.
-                <br><br>
-                <a href="https://www.studyai.tools/" target="_blank" class="launch-button">Launch Site</a>
-            </div>
-        </div>
+<div class="accordion">
 
-        <div class="accordion-item">
-            <input type="radio" name="accordion" id="tool2">
-            <label for="tool2"><img
-                    src="https://truthinadvertising.org/wp-content/uploads/2025/06/MaxAI-ft-image.png"
-                    alt="">2. MaxAI</label>
-            <div class="accordion-content">
-                MaxAI is a comprehensive suite of AI tools that assists with automating repetitive tasks, enabling
-                efficient content creation, and simplifying complex data analysis. By leveraging MaxAI, users can
-                significantly boost their productivity across diverse professional and personal domains.
-                <br><br>
-                <a href="https://www.maxai.me/" target="_blank" class="launch-button">Launch Site</a>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <input type="radio" name="accordion" id="tool3">
-            <label for="tool3"><img
-                    src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_cec6b99b58c145d52af24c2ce239031e/ltx-studio.png"
-                    alt="">3. LTX Studio</label>
-            <div class="accordion-content">
-                LTX Studio is an innovative AI-powered writing and editing tool crafted to assist users in producing
-                superior content swiftly and efficiently. LTX Studio enhances overall writing quality through advanced
-                grammar checks, style suggestions, and content optimization capabilities.
-                <br><br>
-                <a href="https://ltx.studio/" target="_blank" class="launch-button">Launch Site</a>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <input type="radio" name="accordion" id="tool4">
-            <label for="tool4"><img src="https://d329ms1y997xa5.cloudfront.net/accounts/172529/images/Notion.jpg"
-                    alt="">4. Notion AI</label>
-            <div class="accordion-content">
-                Notion AI seamlessly integrates artificial intelligence into the Notion workspace, providing assistance
-                with writing tasks, facilitating collaborative brainstorming sessions, and optimizing project management
-                workflows. Notion AI maximizes efficiency for both individual and team productivity.
-                <br><br>
-                <a href="https://www.notion.so/product/ai" target="_blank" class="launch-button">Launch Site</a>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <input type="radio" name="accordion" id="tool5">
-            <label for="tool5"><img
-                    src="https://play-lh.googleusercontent.com/hiQHKRhpuGu4pWAFhpto9H7qWKSdX-BjKbDAtZYgm_jfoD0cN7MCllGOn6L3XWo-6Q=s256-rw"
-                    alt="">5. Quizlet</label>
-            <div class="accordion-content">
-                Quizlet is a versatile learning platform boosted by AI, offering various tools such as flashcards,
-                engaging quizzes, and interactive study games. Quizlet leverages adaptive learning algorithms to help
-                students master any subject effectively and enjoyably, thereby accelerating learning progress.
-                <br><br>
-                <a href="https://quizlet.com/" target="_blank" class="launch-button">Launch Site</a>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <input type="radio" name="accordion" id="tool6">
-            <label for="tool6"><img src="https://math-gpt.org/mobile-app-icon.png" alt="">6. MathGPT</label>
-            <div class="accordion-content">
-                MathGPT is an innovative AI tool designed to tackle challenging math problems, offering step-by-step
-                solutions, and delivering clear explanations of complex mathematical concepts. MathGPT strives to make
-                learning and understanding math more accessible for all learners.
-                <br><br>
-                <a href="https://www.mathgpt.com/" target="_blank" class="launch-button">Launch Site</a>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <input type="radio" name="accordion" id="tool7">
-            <label for="tool7"><img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Adobe_Firefly_Logo.svg/250px-Adobe_Firefly_Logo.svg.png"
-                    alt="">7. Adobe Firefly</label>
-            <div class="accordion-content">
-                Adobe Firefly is a groundbreaking creative AI tool empowering users to generate captivating images, apply
-                stunning text effects, and produce a wide array of visual content effortlessly. With Firefly, unleashing
-                creativity and bringing imaginative ideas to life has never been simpler.
-                <br><br>
-                <a href="https://www.adobe.com/sensei/generative-ai/firefly.html" target="_blank" class="launch-button">Launch Site</a>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <input type="radio" name="accordion" id="tool8">
-            <label for="tool8"><img src="https://cdn-icons-png.flaticon.com/512/14649/14649068.png" alt="">8. Slidesgo</label>
-            <div class="accordion-content">
-                Slidesgo is an AI-driven platform that automates the creation of professional-grade presentation
-                templates, drastically reducing the time and effort needed to design compelling visual aids. Slidesgo
-                provides a vast library of customizable templates suitable for any presentation purpose.
-                <br><br>
-                <a href="https://slidesgo.com/" target="_blank" class="launch-button">Launch Site</a>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <input type="radio" name="accordion" id="tool9">
-            <label for="tool9"><img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJegCk-tk9EwNlZ6Br_GnM9LJcfsjhtngkpA&s"
-                    alt="">9. Grammarly</label>
-            <div class="accordion-content">
-                Grammarly is a robust AI-powered writing assistant meticulously engineered to check grammar, spelling,
-                punctuation, and style with unparalleled accuracy. By utilizing Grammarly, users can guarantee that their
-                writing is always polished, professional, and error-free across all communication channels.
-                <br><br>
-                <a href="https://www.grammarly.com/" target="_blank" class="launch-button">Launch Site</a>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <input type="radio" name="accordion" id="tool10">
-            <label for="tool10"><img src="https://res.cloudinary.com/apideck/image/upload/v1649374922/icons/tome-app.png" alt="">10. Tome AI</label>
-            <div class="accordion-content">
-                Tome AI is an innovative AI-powered storytelling format that helps users create compelling narratives and
-                presentations with AI-generated visuals and layouts, streamlining the content creation process.
-                <br><br>
-                <a href="https://tome.app/" target="_blank" class="launch-button">Launch Site</a>
-            </div>
-        </div>
+  <div class="accordion-item">
+    <button class="accordion-header">1. ChatGPT</button>
+    <div class="accordion-content">
+      <p>ChatGPT is an AI-powered conversational assistant that can understand and respond to natural language input. It’s great for brainstorming, answering questions, and generating ideas.</p>
+      <a href="https://chat.openai.com" target="_blank" class="launch-btn">Launch Site</a>
     </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-header">2. Midjourney</button>
+    <div class="accordion-content">
+      <p>Midjourney is an AI image generation platform that creates stunning, artistically styled images from text prompts.</p>
+      <a href="https://www.midjourney.com" target="_blank" class="launch-btn">Launch Site</a>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-header">3. Claude AI</button>
+    <div class="accordion-content">
+      <p>Claude by Anthropic is a friendly AI assistant that is trained with safety and helpfulness in mind, making it great for professional and casual queries alike.</p>
+      <a href="https://claude.ai" target="_blank" class="launch-btn">Launch Site</a>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-header">4. Perplexity AI</button>
+    <div class="accordion-content">
+      <p>Perplexity AI is an AI search assistant that provides clear, well-sourced answers to your complex questions.</p>
+      <a href="https://www.perplexity.ai" target="_blank" class="launch-btn">Launch Site</a>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-header">5. Notion AI</button>
+    <div class="accordion-content">
+      <p>Notion AI integrates AI features into your workspace, helping with summarizing, drafting, and rewriting content.</p>
+      <a href="https://www.notion.so/product/ai" target="_blank" class="launch-btn">Launch Site</a>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-header">6. Grammarly</button>
+    <div class="accordion-content">
+      <p>Grammarly uses AI to help you write with clarity by checking grammar, tone, and style.</p>
+      <a href="https://www.grammarly.com" target="_blank" class="launch-btn">Launch Site</a>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-header">7. Jasper</button>
+    <div class="accordion-content">
+      <p>Jasper is an AI writing assistant designed for marketers, helping to create ad copy, blog posts, and more.</p>
+      <a href="https://www.jasper.ai" target="_blank" class="launch-btn">Launch Site</a>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-header">8. Runway ML</button>
+    <div class="accordion-content">
+      <p>Runway ML offers AI-powered tools for video editing, image generation, and creative storytelling.</p>
+      <a href="https://runwayml.com" target="_blank" class="launch-btn">Launch Site</a>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-header">9. Durable.co</button>
+    <div class="accordion-content">
+      <p>Durable uses AI to instantly create websites, helping entrepreneurs quickly establish their online presence.</p>
+      <a href="https://durable.co" target="_blank" class="launch-btn">Launch Site</a>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-header">10. ElevenLabs</button>
+    <div class="accordion-content">
+      <p>ElevenLabs specializes in AI-driven voice generation, enabling ultra-realistic speech synthesis for creative and professional projects.</p>
+      <a href="https://elevenlabs.io" target="_blank" class="launch-btn">Launch Site</a>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const headers = document.querySelectorAll('.accordion-header');
+headers.forEach(header => {
+  header.addEventListener('click', () => {
+    const content = header.nextElementSibling;
+    content.style.display = 
+      content.style.display === 'block' ? 'none' : 'block';
+  });
+});
+</script>
 
 </body>
-
 </html>
