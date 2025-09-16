@@ -1,39 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Toolbox</title>
 <style>
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  padding: 20px;
-}
-
-.accordion-item {
-  border-bottom: 1px solid #ddd;
-}
-
-.accordion-header {
-  background-color: #0073e6;
-  color: white;
-  padding: 15px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  font-size: 16px;
-  cursor: pointer;
-}
-
 .accordion-content {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 15px;
   background-color: white;
-  padding: 15px;
+  transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
 }
 
-.accordion-content p {
-  margin: 0;
+.accordion-content.show {
+  max-height: 500px; /* adjust if you have more text */
+  opacity: 1;
+  padding: 15px;
 }
 
 .launch-btn {
@@ -44,111 +22,30 @@ body {
   padding: 10px 16px;
   text-decoration: none;
   border-radius: 4px;
+  transition: background-color 0.2s ease;
 }
 
 .launch-btn:hover {
   background-color: #218838;
 }
 </style>
-</head>
-<body>
-
-<h2>AI Toolbox</h2>
-
-<div class="accordion">
-
-  <div class="accordion-item">
-    <button class="accordion-header">1. ChatGPT</button>
-    <div class="accordion-content">
-      <p>ChatGPT is an AI-powered conversational assistant that can understand and respond to natural language input. It’s great for brainstorming, answering questions, and generating ideas.</p>
-      <a href="https://chat.openai.com" target="_blank" class="launch-btn">Launch Site</a>
-    </div>
-  </div>
-
-  <div class="accordion-item">
-    <button class="accordion-header">2. Midjourney</button>
-    <div class="accordion-content">
-      <p>Midjourney is an AI image generation platform that creates stunning, artistically styled images from text prompts.</p>
-      <a href="https://www.midjourney.com" target="_blank" class="launch-btn">Launch Site</a>
-    </div>
-  </div>
-
-  <div class="accordion-item">
-    <button class="accordion-header">3. Claude AI</button>
-    <div class="accordion-content">
-      <p>Claude by Anthropic is a friendly AI assistant that is trained with safety and helpfulness in mind, making it great for professional and casual queries alike.</p>
-      <a href="https://claude.ai" target="_blank" class="launch-btn">Launch Site</a>
-    </div>
-  </div>
-
-  <div class="accordion-item">
-    <button class="accordion-header">4. Perplexity AI</button>
-    <div class="accordion-content">
-      <p>Perplexity AI is an AI search assistant that provides clear, well-sourced answers to your complex questions.</p>
-      <a href="https://www.perplexity.ai" target="_blank" class="launch-btn">Launch Site</a>
-    </div>
-  </div>
-
-  <div class="accordion-item">
-    <button class="accordion-header">5. Notion AI</button>
-    <div class="accordion-content">
-      <p>Notion AI integrates AI features into your workspace, helping with summarizing, drafting, and rewriting content.</p>
-      <a href="https://www.notion.so/product/ai" target="_blank" class="launch-btn">Launch Site</a>
-    </div>
-  </div>
-
-  <div class="accordion-item">
-    <button class="accordion-header">6. Grammarly</button>
-    <div class="accordion-content">
-      <p>Grammarly uses AI to help you write with clarity by checking grammar, tone, and style.</p>
-      <a href="https://www.grammarly.com" target="_blank" class="launch-btn">Launch Site</a>
-    </div>
-  </div>
-
-  <div class="accordion-item">
-    <button class="accordion-header">7. Jasper</button>
-    <div class="accordion-content">
-      <p>Jasper is an AI writing assistant designed for marketers, helping to create ad copy, blog posts, and more.</p>
-      <a href="https://www.jasper.ai" target="_blank" class="launch-btn">Launch Site</a>
-    </div>
-  </div>
-
-  <div class="accordion-item">
-    <button class="accordion-header">8. Runway ML</button>
-    <div class="accordion-content">
-      <p>Runway ML offers AI-powered tools for video editing, image generation, and creative storytelling.</p>
-      <a href="https://runwayml.com" target="_blank" class="launch-btn">Launch Site</a>
-    </div>
-  </div>
-
-  <div class="accordion-item">
-    <button class="accordion-header">9. Durable.co</button>
-    <div class="accordion-content">
-      <p>Durable uses AI to instantly create websites, helping entrepreneurs quickly establish their online presence.</p>
-      <a href="https://durable.co" target="_blank" class="launch-btn">Launch Site</a>
-    </div>
-  </div>
-
-  <div class="accordion-item">
-    <button class="accordion-header">10. ElevenLabs</button>
-    <div class="accordion-content">
-      <p>ElevenLabs specializes in AI-driven voice generation, enabling ultra-realistic speech synthesis for creative and professional projects.</p>
-      <a href="https://elevenlabs.io" target="_blank" class="launch-btn">Launch Site</a>
-    </div>
-  </div>
-
-</div>
 
 <script>
 const headers = document.querySelectorAll('.accordion-header');
+
 headers.forEach(header => {
   header.addEventListener('click', () => {
     const content = header.nextElementSibling;
-    content.style.display = 
-      content.style.display === 'block' ? 'none' : 'block';
+
+    // If already open, close it
+    if (content.classList.contains('show')) {
+      content.classList.remove('show');
+    } 
+    // Otherwise open and close others
+    else {
+      document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('show'));
+      content.classList.add('show');
+    }
   });
 });
 </script>
-
-</body>
-</html>
